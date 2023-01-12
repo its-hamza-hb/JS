@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let livres=[{id :10,titre : 'POO',auteur :'RAMI',prix :300},
+                    {id :11,titre : 'JS ES6',auteur :'FAMI',prix :230},
+                    {id :12,titre : 'Algorithme',auteur :'KARIMI',prix :330},
+                    {id :13,titre : 'HTMH& CSS',auteur :'RAMI',prix :340}]
+       
+        let titres= livres.map(n=>n.titre)
+        console.log(titres)
+        
+        let livresRami= livres.filter(n=>n.auteur=='RAMI')
+        console.log(livresRami)
+        
+        let livreId2= livres.find(n=>n.id==12)
+        console.log(livreId2)
+        
+        let totalPrix= livres.map(l=>l.prix).reduce((total,n)=>total+n)
+        console.log(totalPrix)
+        
+        let mesLivres = livres
+        console.log(mesLivres)
+    </script>
+</body>
+</html>
